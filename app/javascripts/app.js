@@ -26,7 +26,7 @@ function sendCoin() {
 
   setStatus("Initiating transaction... (please wait)");
 
-  meta.sendCoin(receiver, amount, {from: account[0]}).then(function() {
+  meta.sendCoin(receiver, amount, {from: account}).then(function() {
     setStatus("Transaction complete!");
     refreshBalance();
   }).catch(function(e) {
